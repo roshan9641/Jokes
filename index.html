@@ -61,26 +61,8 @@
         <section class="api_body"></section>
         <button id="fetch_jokes">Get Another Jokes</button>
     </div>
-    <script>
-        let apiBody = document.querySelector(".api_body");
-        let apiUrl = "https://icanhazdadjoke.com/";
-     
-        fetchData = async()=>{
-        try{
-        let res = await fetch(apiUrl,{
-            headers:{
-                accept:"application/json",
-            },
-        });
-      let data = await res.json();
-       apiBody.innerText = data.joke;
-    }catch(error){
-        apiBody.innerText = `Error: ${error}`;
-    }
-      }
-      fetchData();
-        document.querySelector("#fetch_jokes").addEventListener("click", fetchData); 
-    </script>
+  <script src="index.js">
+        
 </body>
 
 </html>
